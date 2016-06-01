@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JS简单练习01-LAL</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- 	<link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+	</head>
+
+	<body onload="Time()">
+		
+		<form>
+			<p>//01： 如果数组中存在 item，则返回元素在数组中的位置，否则返回 -1。
+			function indexOf(arr, item) {}indexOf([ 1, 2, 3, 4 ], 3); // 返回 2</p>
+			<label name="array-search">数组：</label>
+			<input type="text" id="array-search" name="array-search" required="required" placeholder="请输入数组，空格隔开" />
+			<label name="item-search">目标值：</label>
+			<input type="text" id="item-search" name="item-search" required="required" placeholder="请输入一个要查找的数字"/>
+			<input type="submit" id="search" value="Search" onClick="ArraySearch('array-search', 'item-search');" / >
+		</form>
+
+		<form>
+			<p>// 02： 计算给定数组 arr 中所有元素的总和
+			function sum(arr) {}sum([ 1, 2, 3, 4 ]); // 返回 10</p>
+			<label name="array-sum">数组：</label>
+			<input type="text" id="array-sum" name="array-sum" required="required" placeholder="请输入数组,空格隔开">
+			<input type="submit" id="array-sum" value="Sum" onClick="ArraySum('array-sum');"/ >
+		</form>
+
+		<form>
+			<p>// 03： 统计数组 arr 中值等于 item 的元素出现的次数
+			 function count(arr, item) {}count([1, 2, 4, 4, 3, 4, 3], 4); // 返回 3</p>
+			<label name="array-count">数组：</label>
+			<input type="text" id="array-count" name="array-count" required="required" placeholder="请输入数组，空格隔开" />
+			<label name="item-count">目标值：</label>
+			<input type="text" id="item-count" name="item-count" required="required" placeholder="请输入一个要查找的数字"/>
+			<input type="submit" id="count" value="Count" onClick="ArrayCount('array-count', 'item-count');"/ >	
+		</form>
+
+		<p>// 04: 在页面显示当前时间，精确到秒数，且不断变化</p>
+		<div id="time" class="time"></div>
+
+
+		
+		<div class="rotate">
+			<p>// 05: 图片轮换·</p>
+			<img class="arrow" src="images/arrow-left.png" onClick="Go (-1);">
+			<img id="pictures" src="images/img1.jpg">
+			<img class="arrow" src="images/arrow-right.png" onClick="Go (1);">
+		</div>
+
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
+</html>
